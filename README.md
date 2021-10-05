@@ -12,6 +12,6 @@ The solution and scripts in this folder enable stepping through code in a debugg
     1. `$webJobsVersion` - This should be set to any semver that does not match a typical release version to avoid conflicts/picking up published versions.
     1. `$webJobsRoot` - The full path where you have cloned the `azure-webjobs-sdk` repo.
     1. `$functionAppRoot` - The root location of the function app you want to debug.
-1. To debug with the Event Hubs extension, run the `FunctionsDebuggingBuildEventHubs.ps1` **AFTER** running `FunctionsDebugginBuild.ps1` as the former depends on variables set by the latter.  Follow instructions to update the constants in this script file as well.
+    1. Choose an extension you would like to debug (or none) via the `$extension` variable.
 
 Contact @sidkri with any questions.

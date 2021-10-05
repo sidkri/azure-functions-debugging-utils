@@ -7,13 +7,13 @@ $webJobsVersion =  "<ANY SEMVER NOT MATHING RELEASED VERSIONS e.g. 999.0.0>"
 $webJobsRoot = '<FULL PATH TO azure-webjobs-sdk CLONED REPO>'
 $functionAppRoot = '<FULL PATH OF FUNCTION APP>'
 # Set to the extension you are debugging
-# Supported sptions: SERVICE_BUS, EVENT_HUB
 Enum Extensions 
 {
-  ServiceBus = 0
-  EventHub = 1
+  None = 0
+  ServiceBus = 1
+  EventHub = 2
 }
-$extension = [Extensions]::EventHub;
+$extension = [Extensions]::None;
 
 ####################
 # Dynamic settings
@@ -134,7 +134,7 @@ foreach ($project in $functionHostProjects)
 }
 
 ############################################################
-# Functions App: Add WebJobs and Ext package dependency
+# Function App: Add WebJobs and Ext package dependency
 ############################################################
 Write-Host "`n`n==========================================================="
 Write-Host "===== Adding custom packages to Function App project ====="
